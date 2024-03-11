@@ -55,8 +55,8 @@ async def tag_all_users(_,message):
             SPAM_CHATS.remove(message.chat.id)
         except Exception:
             pass        
-           
-@app.on_message(filters.command("alloff", "cancel") & ~filters.private)
+           # ()   allff -- [(  value1 , value2 )]
+@app.on_message(filters.command(["alloff", "cancel"]) & ~filters.private)
 async def cancelcmd(_, message):
     chat_id = message.chat.id
     if chat_id in SPAM_CHATS:
