@@ -10,7 +10,7 @@ SPAM_CHATS = []
 
 
 #@app.on_message(filters.command(["mention", "all"]) & filters.group & admin_filter)
-@app.on_message(filters.command(["mantion", "all"], prefixes=["/", "@", "#"])) & filters.group & admin_filter)
+@app.on_message(filters.command(["mantion", "all"], prefixes=["/", "@", "#" ,""])) & filters.group & admin_filter)
 
 async def tag_all_users(_,message): 
     replied = message.reply_to_message  
